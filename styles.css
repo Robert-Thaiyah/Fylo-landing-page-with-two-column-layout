@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --very-dark-blue:hsl(243, 87%, 12%);
+    --desaturated-blue: hsl(238, 22%, 44%);
+    --bright-blue:hsl(224, 93%, 58%);
+    --moderate-cyan:hsl(170, 45%, 43%);
+    --light-grey-blue:hsl(240, 75%, 98%);
+    --light-grey:hsl(0, 0%, 75%);
+}
+
+/* general styling */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    background: hsl(240, 75%, 95%);
+}
+
+a{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+
+p{
+    color: var(--desaturated-blue);
+}
+
+/* hover effects */
+ul a:hover{
+    color: var(--bright-blue);
+    transition: 0.3s ease-in;
+}
+      
+.fa-facebook:hover {
+        color: #1773EA;
+        transition: 0.2s ease-in;
+  }
+  
+  .fa-instagram:hover {
+        color: #B32E87;
+        transition: 0.2s ease-in;
+  }
+  
+  .fa-twitter:hover {
+        color: #1C9CEA;
+        transition: 0.2s ease-in;
+  }
+
+  .testimony a:hover{
+    color: hsl(170, 45%, 65%);
+    border-bottom: 1px solid hsl(170, 45%, 65%);
+}
+
+
+/*header */
+.header .container{
+    justify-content: space-between;
+}
+
+ul{
+    justify-content: space-around;
+    gap: 50px;
+}
+
+/* hero area */
+.hero-area .container img{
+    width: 100%;
+}
+
+/* testimonials */
+
+/* .testimony {
+    position: relative;
+    background: url("./images/bg-curve-desktop.svg") ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+} */
+.testimony-illustration img{
+    width: 100%;
+    position: relative;
+}
+
+.card img{
+    border-radius: 50%;
+    width: 80px;
+}
+
+.kyle {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.card >img{
+    width: 30px;
+}
+
+.testimony a{
+    color: var(--moderate-cyan);
+    border-bottom: 1px solid var(--moderate-cyan);
+}
+
+/* access */
+
+.access .container{
+    height: 250px;  
+}
+
+.access .submission{
+   display: grid;
+   gap: 20px;
+}
+
+
+.submission #email{
+    width: 400px;
+    border-radius: 0%;
+}
+.submission .btn{
+    width: 30%;
+}
+/* footer */
+
+.footer .container
+{
+    justify-content: space-around;
+    height: 350px;
+}
+
+.phone ,
+.email{
+    color: white;
+}
+.phone::before{
+    content: url(./images/icon-phone.svg);
+    margin: 0 20px;
+}
+
+.email::before{
+    content: url(./images/icon-email.svg);
+    margin: 0 20px;
+}
+
+.socials{
+    display: flex;
+    gap: 20px;
+}
+
+.contacts >a{
+    color: white;
+}
+
+.contacts a {
+    fill: white;
+}
+
+
+/* media queries */
+@media(max-width:768px){
+
+    img{
+        width: auto;
+    }
+
+    
+    .grid,
+    .grid-1,
+    .testimony .grid
+    .access .grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .flex
+    {
+        flex-direction: column;
+    }
+
+    .header .container .flex{
+        display:flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+    }
+    .access .container{
+        height: auto;  
+    }
+    
+    .card img{
+        border-radius: 50%;
+        width: 80px;
+    }
+
+    .footer .container{
+        height: auto;
+    }
+
+    .submission{
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .submission #email{
+        width: 100%;
+    }
+    .submission .btn{
+        width: 100%;
+    }
+
+    .card{
+        width: auto;
+    }
+
+    h1, h2, h3{
+       text-align: center;
+    }
+    
+    p{
+       text-align: center;
+    }
+
+    .testimony-one {
+        text-align: center;
+    }
+
+}
