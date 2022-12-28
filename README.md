@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/Robert-Thaiyah/Fylo-landing-page-with-two-column-layout)
-- Live Site URL: [Livesite URL](https://your-live-site-url.com)
+- Live Site URL: [Livesite URL](https://robert-thaiyah.github.io/Fylo-landing-page-with-two-column-layout/)
 
 ## My process
 
