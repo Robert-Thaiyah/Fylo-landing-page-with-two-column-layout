@@ -81,17 +81,31 @@ ul{
     width: 100%;
 }
 
+#email{
+   text-indent: 2em;
+}
+
+.show{
+    color: #db133a6e;
+}
+
+#email:hover,
+#email::selection{
+    border-color: red;
+}
+
 /* testimonials */
 
-/* .testimony {
+/* .testimony{ 
+    content: '';
     position: relative;
     background: url("./images/bg-curve-desktop.svg") ;
-    background-position: center center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
-
+    z-index: -100;
 } */
+
 .testimony-illustration img{
     width: 100%;
     position: relative;
@@ -121,7 +135,7 @@ ul{
 /* access */
 
 .access .container{
-    height: 250px;  
+    height: 250px; 
 }
 
 .access .submission{
@@ -129,14 +143,15 @@ ul{
    gap: 20px;
 }
 
-
 .submission #email{
     width: 400px;
     border-radius: 0%;
 }
+
 .submission .btn{
     width: 30%;
 }
+
 /* footer */
 
 .footer .container

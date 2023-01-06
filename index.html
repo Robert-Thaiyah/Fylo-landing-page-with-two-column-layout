@@ -43,11 +43,15 @@
       <p class="py-1">Fylo stores your most important files in one secure location. 
   Access them wherever you need, share and collaborate with friends, 
   family, and co-workers.</p>
-
-        <div class="submission">
-          <input type="email" name="email" id="email" placeholder="     Enter your email..." >
+          <form action="#">
+             <div class="submission">
+          <input pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" type="email" 
+          name="email" id="email" placeholder="Enter your email..." oninvalid="invalidFn()" title="Must be a valid email address">
           <button class="btn">Get Started</button>
+          <div class="show"></div>
         </div>
+          </form>
+     
       </div>
 
       <div class="hero-illustration">
@@ -98,14 +102,16 @@
       <p class="text-secondary sm">It only takes a minute to sign up and our free starter tier is extremely generous. 
   If you have any questions, our support team would be happy to help you.</p>
     </div>
-    <div class="submission">
-
-        <input type="email" name="email" id="email" placeholder="   Enter your email...">
-      <button class="btn" type="submit"> Get Started For Free</button>
-  
-      
+    
+    <form action="#">
+      <div class="submission">
+   <input pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" type="email" 
+   name="email" id="email" placeholder="Enter your email..." oninvalid="noEmail()" title="Must be a valid email address">
+    <div class="msg"></div>
+   <button class="btn">Get Started for Free</button>
+ </div>
+   </form>  
     </div>
-  </div>
 </section>
 
  <!-- footer  -->
@@ -151,5 +157,22 @@
     </p>
   </footer>
  </footer> 
+
+ <script>
+  function invalidFn(){
+    var msg = document.querySelector('.show');
+    document.querySelector('input').style.background = '#db133a6e';
+  msg.innerHTML = "";
+  msg.innerHTML = "Please check your email!";
+}
+
+function noEmail(){
+    var msg = document.querySelector('.msg');
+    document.querySelector('input').style.background = '#db133a6e';
+  msg.innerHTML = "";
+  msg.innerHTML = "Please check your email!";
+}
+
+ </script>
 </body>
 </html>
